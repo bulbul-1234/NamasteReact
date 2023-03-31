@@ -1,0 +1,26 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bulbul-1234/NamasteReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bulbul-1234/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/bulbul-1234/NamasteReact#readme",
+  "dependencies": {
+    "browserlist": "^1.0.1",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}
