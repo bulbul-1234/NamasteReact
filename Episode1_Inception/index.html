@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Namaste React</title>
+</head>
+<body>
+    <h1>Bulbul is here</h1>
+    <!-- this won't be replaced because it is outside the root. -->
+    <div id="root">
+        <h1>Bulbul is here</h1>
+        <!-- this h1 will be replaced by js code. -->
+        <!-- first way from html
+            <h1>Hello World</h1> -->
+    </div>
+    <!-- second way from JS 
+        <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World from JS";
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+
+    <!--third way from React-->
+    <!--Just get a cdn link and use it, by this we can bring react in our project.
+    there are two files, first is- core file of react(core fundamentals)
+    second is useful for dom operation, to modify the dom
+    why different file?
+    React doesn't only work for browsers, it also work for mobile like reactnative, react3d is also there-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js">
+    // const heading = React.createElement("h1", {}, "Hello World from react");
+    // const root = ReactDOM.createRoot(document.getElementById("root"));
+    // root.render(heading);
+    </script>
+    <!-- this script can be written here only as it will need react so importing react thing should be before this. -->
+
+    <!--Let's create a new JS file and keep the js code there only.-->
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+Q1. what is emmet?
+-> Emmet is an essential toolkit for developers. And provides some shortcut.
+   by writing some abbreviations, we are getting a full html code.  It's a plugin which can be installed from vscode.
+   ex- div.ml will give 
+   <div class="ml"></div>
+   div#parent will create
+   <div id="parent"></div>
+   div{I am bulbul} will give
+   <div>I am bulbul</div>
+   ul>li
+   <ul>
+   <li></li>
+   </ul>
+   div+p+span
+   <div></div>
+   <p></p>
+   <span></span>
+
+
+Q2. What is CDN? Why to use CDN? Is there any other way to use react?
+-> Content Delivery Network
+   In simple terms, a CDN helps deliver web content (like text, images, and videos) to us faster by storing copies of it in various locations and directing us to the closest copy.
+   We are using CDN because we are just starting with react or have a pre-built website & need to include react components. CDN are handy and they require minimal setup. It helps our work started in fewer lines of code. 
+   It’s a network of servers that delivers content to users. Both react & reactDOM are available over a CDN.
+   We can use react by the creat-react-app as well.
+
+
+Q3. What is cross origin given in react cdn link?
+-> Feching of data from third party or from the another domain is known as CORS(cross origin resource sharing). if a our website wants a data from the other domain than before the actual data request a PREFLIGHT request is made to that domain by our browser than server will send some preflight response .After this preflight request only we send actual data request. Preflight request is request to authenticate that cross domain server communication.
+
+Q4. Why React known as React?
+-> Because it is reacting to changes made to it.
+
+Q5. Difference between React and React.Dom
+->  React is a JavaScript library for building User Interfaces and ReactDOM is the JavaScript library that allows React to interact with the DOM.
+    React – React library is responsible for creating views
+    React DOM – It is responsible to actually render UI in the browser
+
+
+Q6. Difference B/W react.devlopment.js and react.production.js
+-> React.production.js:
+	This file is optimized for production environments. It’s smaller in size due to various optimizations like minification and removal of development-Specific checks and warnings. Performance is prioritized over debugging & development convenience. It’s suitable for use in the final version of your application that will be deployed to users.
+    React.development.js:
+	This file is meant for development and debugging purposes. It included additional checks, warnings & development related features that assist developers in identifying issues & debugging code. It’s larger in size compared to the production version because of the extra development features.
+
+
+Q7.Async and Defer
+-> These both are attributes of script tag.
+   without any attribtes-- HTML parsing stops whenever a sript tag encounterd that script is fetched than this script gets executed after that HTML parsing continued.
+   Async--It fetch the scripts parallely with parsing and when fetching is completed it executes all the scripts after that HTML parsing continued.It does not gurantee the order of execution of scripts.
+   Defer--It fetch the scripts parallely with parsing and when parsing is completed it executes all the scripts.It gurantee the order of execution of scripts
+
+
+Q8. Library vs framework?
+React is a library and library can be applied at few parts only as well but framework could be applied everywhere.
+react si a library and it can work independently at any part of the application. 
+library-> It works independently only small portion itself.
+	It’s not  a fully-fledged framework
+	It target a specific functionality
+
+Framework-> It tries to provide everything required to develop a complete application.
+
