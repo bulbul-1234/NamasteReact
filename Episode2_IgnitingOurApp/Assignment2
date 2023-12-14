@@ -1,0 +1,176 @@
+Q1. what is npm?
+-> It is a package manager for JavaScript, and it is the default package manager for the Node.js runtime    environment. NPM allows developers to install, manage, and share reusable code packages and libraries.
+   By using "npm init" we can intitialze it. By using "npm install" we can add dependencies.
+   standard repository for all the packages. 
+   All the packages are hoisted over here.
+   All utilities and library are from here only.
+   When we create a create-react-app it automatically have npm inside it.
+
+
+Q2. - What is `Parcel/Webpack`? Why do we need it?
+-> Parcel/Webpack is bundles basically which bundles our webapp means making it into 1 html,1css and 1js file before moving it to production. It basically need to be minified. 
+When we do create-react-app then behind the scene it is using webpack bundler.
+All bundlers do the same thing, can do the thing differenly but they do the same thing.
+Here we will use parcel.(In the 2nd episode)
+Parcel is one of the best library.
+parcel will ignite our app.
+
+
+Q3. What is `.parcel-cache`?
+->The .parcel-cache directory is a folder created by Parcel, the web application bundler, to store cached and intermediate build artifacts during the bundling process. Parcel uses caching to speed up subsequent builds by avoiding redundant work.
+After first npx parcel index.html, it will take less time to execute due to cache and it is stored in .parcel-cache
+
+
+Q4.  What is `npx` ?
+-> npx- executing a package
+npx is a package runner tool that comes with npm (Node Package Manager) starting from version 5.2.0. It is used to execute Node.js packages that are not globally installed. The primary purpose of npx is to make it easy to use and interact with command-line tools and scripts from the npm registry without the need to install them globally.
+nox aspects-
+Executing Packages: npx is used to run Node.js packages directly from the npm registry. For example, instead of installing a tool globally with npm install -g <package> and then using it, you can use npx <package> to execute it directly without the need for a global installation.
+Local vs. Global Execution: When you use npx, it checks whether the package is installed locally in the project's node_modules directory. If it's not found locally, it will download and execute the package temporarily without the need for a global installation.
+
+
+Q5. What is difference between `dependencies` vs `devDependencies`
+-> Dependencies:
+Dependencies, listed under the "dependencies" key in the package.json file, are packages that are required for the application to run in a production environment.
+These are the packages that our application relies on to function properly when it's in a production or runtime environment.
+When someone installs our project using npm install --production or when deploying our application, only the dependencies are installed, excluding the development-specific packages.
+Example in package.json:
+"dependencies": {
+  "express": "^4.17.1",
+  "lodash": "^4.17.21"
+}
+npm install parcel- as a prod dependency
+
+DevDependencies:
+DevDependencies, listed under the "devDependencies" key, are packages that are only needed during development or for running build scripts.
+These are tools, libraries, or testing frameworks that are not required for the application to function in a production environment but are necessary for tasks like testing, linting, transpiling, etc.
+When someone installs your project without the --production flag, both dependencies and devDependencies are installed. However, in a production deployment, developers often skip installing devDependencies to reduce the size of the deployed application.
+Example in package.json:
+"devDependencies": {
+  "eslint": "^7.32.0",
+  "jest": "^27.0.6"
+}
+npm install -D parcel --- as a dev dependency
+
+
+Q6. What is Tree Shaking?
+-> A: Tree shaking is process of removing the unwanted code that we do not use while developing the application. In computing, tree shaking is a dead code elimination technique that is applied when optimizing code.
+
+
+Q7. What is Hot Module Replacement?
+->Hot Module Replacement (HMR) is a feature in modern web development by which devloper process becomes quicker and more interactive.
+It allows developers to update modules in an application without requiring a full page reload. It significantly speeds up the development process by preserving the application's state and updating only the modules that have changed. HMR is commonly used in conjunction with module bundlers like Webpack or Parcel.
+
+
+Q8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
+own words.
+->Dev build
+Local server
+HMR- Hot Module Replacement
+File watching Algorithm-written in cpp
+Caching - build faster
+Image Optimization
+Minification
+Bundling
+Compressing
+Consistent hashing
+Code Splitting
+Differential Bundling
+Tree shaking algo-- remove unwanted code
+Different dev and prod bundlers
+
+
+Q9. What is `.gitignore`? What should we add and not add into it?
+->It is a folder in our react code and inside it we place the files and folder which we don't wanna commit in our repository.
+
+Q10. What is the difference between `package.json` and `package-lock.json`
+-> Package.json: configuration of npm. keeps track of what versions of packages are there.
+  Package-lock.json: keeps the track of exact version.(At the time of installation)
+  it locks the version and keep that info only.
+
+
+Q11. Why should I not modify `package-lock.json`?
+-> As it is storing the exact version of what packages we have.so to keep a track of what exact version we have installed at the time of our project setup.
+
+Q12. What is `node_modules` ? Is it a good idea to push that on git?
+-> node_modules ia folder created when we ri=un npm i and it consist all the dependency of the packages inside it.
+   We shouldn't commit this folder as it is very heavy and it can be created by package.json and package-lock.json.
+
+
+Q13. What is the `dist` folder?
+-> The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications. Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
+
+Q14. What is `browserlists`?
+-> It is an tool, which tells about the browsers, which can be supported on web app like older browsers.
+   It is there in package.json
+      "BrowserList" : [
+         "last 2 chrome version",
+         "last 2 firefox versions"
+        ]
+
+
+Q15. Read about dif bundlers: vite, webpack, parcel
+these are diiferent bundlers available.
+● Read about: ^ - caret and ~ - tilda
+-> Carret: ^ Automatically update minor version(suggested as minor updates are fine but major update may break the application)
+   Tilda: ~ Automatically update major versions
+
+Q16. Git vs Github?
+-> Git is a distributed version control system (DVCS) that allows developers to track changes in their codebase, collaborate with others, and manage different versions of their software.
+  GitHub is a web-based platform that provides hosting for Git repositories. It adds a layer of collaboration features on top of Git, making it easier for individuals and teams to work together on software projects.
+
+Q17. chunking, bundling, how to make production ready app?
+-> remove comments, image optimization, making it into bundlers
+   we want to minify our code 
+   bundle our code
+   optimize our images
+   compress the code
+
+
+react is not making our app fast but there are a lot of packages that is making our app fast.
+
+package.json-- configuration for npm.
+packages are also known as dependencies.
+Our project is dependent on a lot of packages. And npm manages that. npm manages what is the version of the packages what we are using it is doing that in package.json.
+most imp package is bundler.
+
+what is bundler?
+When we have html, css and js then before sending it to production our whole code need to be bundled, whole code need to be minified before sending it to production.
+parcel, webpack, weed these are examples of bundler.
+It packages our app before it is shift to production.
+When we do create-react-app then behind the scene it is using webpack bundler.
+All bundklers do the same thing, can do the thing differenly but they do the same thing.
+Here we will use parcel.
+Parcel is one of the best library.
+parcel will ignite our app.
+
+
+Transitive Dependency?
+-> depending on some package and that package is dependent on some other packages, this is called Tansitive dependency.
+Node modules is a collection of dependencies.
+Should we push this node_modules to github or prod?
+No, Never.
+It can be put in gitignore.
+And we should pu package.json and package-lock.json in github. It maintains the dependencies.
+We can recreate node_modules from package.json and package-lock.json.
+
+ npx parcel index.html
+-> npx- executing a package
+   npm- installing a package 
+
+CDN links are not a proper way of using react. Why?
+it is an expensive operation.
+It will make network calls to take react from unpkg.com
+from unpkg it is taking react18 right now, wjen upper version will come then we need to update it manually.
+Now we need to install react as a package.
+Now wl install react as normal dependency and not as dev dependency.
+npm install react.
+
+It is taking a lot of time to install parcel and unable to run npx parcel index.html
+
+
+
+
+
+
+
