@@ -35,6 +35,17 @@
    padding: 5px;
    border: 1px solid lightgrey;
 }
+.dis-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+.m-5{
+    margin: 5px;
+}
+.m-0{
+    margin: 0px;
+}
 .res-card:hover {
     cursor:  pointer;
     border: 1px solid black;
@@ -44,4 +55,5 @@
 }
 .res-logo {
    width: 200px;
+   height: 200px;
 }
