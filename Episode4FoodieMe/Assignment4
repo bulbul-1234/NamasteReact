@@ -1,0 +1,49 @@
+Q1. Is JSX mandatory for React?
+-> No, JSX in not mandatory for React, JSX helps to write HTNK/XML like syntax inside a javascript file ,It makes the developer life easy, Without using JSX also we can write React.
+
+
+Q2. Is ES6 mandatory for React?
+-> ES6 is not mandatory for react. 
+   ES6 is the standardization of javascript for making code more readable and more accessible. If we don't use ES6 in react, there is an alternative to perform. We can use create-react-class instead of ES6. 
+
+
+Q3.  How can I write comments in JSX?
+->  We can add the comments inside JSX by wrapping the content with "/* content to comment */"
+
+
+Q4. What is <React.Fragment></React.Fragment> and <></> ?
+->   React Fragment is a feature in React that allows you to return multiple elements from a React component by allowing you to group a list of children without adding extra nodes to the DOM. To return multiple elements from a React component, you'll need to wrap the element in a root element.
+    
+     The React framework offers a shorthand syntax for fragment components that appears as an empty tag: <></> . While it is supported in JSX syntax, it is not part of the HTML standard and thus is not supported natively by browsers. 
+
+
+Q5. What is Virtual DOM?
+->  A virtual DOM object is the same as a real DOM object, except that it is a lightweight copy. This means that it cannot manipulate on-screen elements. Moreover, upon any change of a property, it only updates the corresponding nodes and not the entire tree.
+ 
+ Real DOM is what we see on our browser screen and virtual DOM is copy of it. The main difference is that when we make changes in any part of real DOM, It re-renders the whole DOM at once and that affects efficiency of our server loading cause it has to reload the whole page as browser can only read JS, Html/CSS.
+
+
+Q6. What is Reconciliation in React?
+->  Reconciliation is the process of updating the DOM.In React this is done by the Virtual DOM.
+
+
+Q6. What is React Fiber?
+->  The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+ 
+  React Fiber is a complete rewrite of the React core algorithm, focusing on improving performance and responsiveness. Its main goal is to enable incremental rendering, allowing React to split the work of rendering into smaller chunks, and pause and resume the work as needed.24 Mar 2023
+
+
+
+Q7. Why we need keys in React? When do we need keys in React?
+-> A “key” is a special string attribute we need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. Keys are used to give an identity to the elements in the lists.
+
+Q8. Can we use index as keys in React?
+-> Yes, we can use Index as keys in React but it is not recommended as good practice.If we choose not to assign an explicit key to list items then React will default to using indexes as keys.
+
+
+Q9. What is props in React? Ways to
+->  props are nothing but the properties they are used for passing the data from one component to another. 
+
+
+Q10. What is a Config Driven UI ?
+->   Config-driven UI is a technique that allows you to create user interfaces based on a configuration file, such as JSON, or a TypeScript file that defines the layout and content of the UI components. This can be useful for creating dynamic and customizable UIs without hard coding them.
