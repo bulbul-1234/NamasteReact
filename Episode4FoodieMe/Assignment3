@@ -1,0 +1,58 @@
+Q1. What is JSX?
+-> JSX is XML like syntax or
+
+
+Q2. Superpowers of JSX
+- JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
+- We can use JSX to conditionally output some content or data to your DOM safeguards it against an XSS attack as JSX Prevents Injection Attacks.
+- JSX also allows React to show more useful error and warning messages.
+- JSX helps us in keeping our code simpler and elegant when writing large pieces of code.
+- Faster than normal JavaScript as it performs optimizations while translating to regular JavaScript.
+
+
+Q3. Role of type attribute in script tag? What options can I use there?
+-> The type attribute specifies the type of the script. The type attribute identifies the content between the <script> and </script> tags
+   The type attribute normally gives language of script or format of data
+    => It is used to add the type of scripts like React (module)
+    => <script type = "module" src="app.js"></script>
+    => <script type = "text/javascript" src="app.js"></script>
+
+
+Q4. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+-> 3 ways of calling component
+   {TitleComponent} - This is used to add an javascript variable inside an JSX 
+            const TitleComponent = 45000
+            const Total = () => (
+                {TitleComponent}
+            )
+    
+   {<TitleComponent />} - This is used to add as an React Components inside the JSX, that is component inside an component which is known as composable components
+            const TitleComponent = () => {
+                return <h1>React Components</h1>
+            }
+            const Display = () => {
+                return(
+                    <div>
+                       <TitleComponent />
+                    </div>
+                )
+            }
+    
+   {<TitleComponent></TitleComponent>}  - This is used to add as an React Components in JSX, if we have any children elements to render in it
+
+Q5. Babel and Parcel role in JSX 
+->  Generally a JSX will be converted to a React.createElement and the parcel consisting of babel[javascript compiler] is the one which does that conversion. after the converion of a javascript object 
+          it will be rendered as a HTMl element
+
+Q6. Components
+ ->  In React everything is a component. A component is nothing but a javascript function which returns a JSX.
+     React consists of Two kinds of components. 
+     1. class based components.
+     2. Functional components. 
+   Functional Components 
+    Functional components are the normal javascript functions which returns a JSX code or a react element.
+    ex: const FunctionalComponent = () => {
+        return (
+            <h1> Hello world </h1>
+        )
+    }          
